@@ -1,15 +1,18 @@
 import React from 'react'
 import {StyleSheet, View} from 'react-native'
-
 import { Text } from 'react-native-paper'
+import Header from '../component/Header'
 
 function AddNotes() {
     return(
+        <>
+        <Header titleText= 'Add a New Note'/>
         <View style = {styles.container}>
             <View style= {styles.titleContainer}>
                 <Text style={styles.title}>Add Notes Model Screen</Text>
             </View>
         </View>
+        </>
     )
 }
 
