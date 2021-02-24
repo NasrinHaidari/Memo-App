@@ -9,7 +9,7 @@ function AddNotes({navigation}) {
 
 // when we press to save button we will navigate back to ViewNote Screen
     function onSaveNote() {
-        navigation.state.params.addNote({noteTitle, noteValue})
+        navigation.state.params.addNotes({noteTitle, noteDescription})
         navigation.goBack()
     }
 
