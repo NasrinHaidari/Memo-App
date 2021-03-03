@@ -1,15 +1,19 @@
-import React, {useState} from 'react'
+import React, {useState, useContext} from 'react'
 import {StyleSheet, View, FlatList} from 'react-native'
 import { Text, FAB, List } from 'react-native-paper'
 import Header from '../component/Header'
+import { Context as NoteContext } from './src/context/NoteContext'
 
 function ViewNotes({navigation}) {
     // we need to create new useState variable for new notes, we will show this notes add into faltList
-    const [notes, setNotes] = useState([])
+    // const [notes, setNotes] = useState([])
+    const {state, addnote, deletenote} = useContext(NoteContext)
 
     const addNotes= note => {
-        note.id = notes.length + 1
-        setNotes([...notes, note])
+        note.id = state.length + 1
+        addnote(note)
+
+        // setNotes([...notes, note])
     }
     return(
         <>
@@ -21,13 +25,14 @@ function ViewNotes({navigation}) {
                 </View>
             ) : (
                 <FlatList 
-                    data={notes}
+                    data={state}
                     renderItem={({ item }) => (
                         <List.Item
                             title={item.noteTitle}
                             description={item.noteDescription}
                             descriptionNumberOfLines={1}
                             titleStyle={styles.listTitle}
+                            onPress = {()=> deletenote(item.id)}
                         />
                     )}
                     keyExtractor= {item => item.id.toString()}
