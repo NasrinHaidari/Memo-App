@@ -7,7 +7,7 @@ function AddNotes({navigation}) {
     const [noteTitle, setNoteTitle] = useState('')
     const [noteDescription, setNoteDescription] = useState('')
 
-// when we press to save button we will navigate back to ViewNote Screen
+    // when we press to save button we will navigate back to ViewNote Screen
     function onSaveNote() {
         navigation.state.params.addNotes({noteTitle, noteDescription})
         navigation.goBack()
