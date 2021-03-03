@@ -2,7 +2,7 @@ import React, {useState, useContext} from 'react'
 import {StyleSheet, View, FlatList} from 'react-native'
 import { Text, FAB, List } from 'react-native-paper'
 import Header from '../component/Header'
-import { Context as NoteContext } from './src/context/NoteContext'
+import { Context as NoteContext } from '../context/NoteContext'
 
 function ViewNotes({navigation}) {
     // we need to create new useState variable for new notes, we will show this notes add into faltList
@@ -19,7 +19,7 @@ function ViewNotes({navigation}) {
         <>
         <Header titleText= 'Sample Memo App'/>
         <View style = {styles.container}>
-            {notes.length === 0 ? (
+            {state.length === 0 ? (
                 <View style= {styles.titleContainer}>
                     <Text style={styles.title}>You do not have any Notes</Text>
                 </View>
