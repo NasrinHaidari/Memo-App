@@ -1,0 +1,13 @@
+{
+  "expo": {
+    "name": "MemoApp",
+    "slug": "MemoApp",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/memo.png",
+    "android": {
+      "versionCode":1,
+      "package": "com.riyhana.MemoApp"     
+    }
+  }
+}
