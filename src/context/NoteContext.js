@@ -15,17 +15,18 @@ const noteReducer = (state = initialState, action) => {
     default:
       return state;
   }
-}
+};
 
-const addnote = dispatch => async(note) => {
-    dispatch ({type: ADD_NOTE, payload: note})
-}
+const addnote = (dispatch) => async (note) => {
+  dispatch({ type: ADD_NOTE, payload: note });
+};
 
-const deletenote = dispatch => async(id) => {
-    dispatch({type: DELETE_NOTE, payload: id})
-}
+const deletenote = (dispatch) => async (id) => {
+  dispatch({ type: DELETE_NOTE, payload: id });
+};
 
-export const {Provider, Context} = createDataContext(
-    noteReducer, {addnote, deletenote},
-    []
-)
+export const { Provider, Context } = createDataContext(
+  noteReducer,
+  { addnote, deletenote },
+  []
+);

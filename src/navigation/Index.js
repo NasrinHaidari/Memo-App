@@ -3,6 +3,7 @@ import {createStackNavigator} from 'react-navigation-stack'
 
 import ViewNotes from '../screens/ViewNotes'
 import AddNotes from '../screens/AddNotes'
+import searchNotes from '../screens/searchBar'
 
 const StackNavigator = createStackNavigator({
     ViewNotes: {
@@ -10,6 +11,9 @@ const StackNavigator = createStackNavigator({
     },
     AddNotes: {
         screen: AddNotes
+    },
+    searchNotes: {
+        screen: searchNotes
     }
 },
 {

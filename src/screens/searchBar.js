@@ -4,13 +4,23 @@ import { Text, IconButton, TextInput, FAB } from 'react-native-paper'
 import { Colors } from 'react-native/Libraries/NewAppScreen'
 import Header from '../component/Header'
 
-function SearchScreen() {
-    return(
+// function SearchScreen() {
+//     return(
+//         <View style={styles.searchContainer}>
+//             <TextInput placeholder="Search..." style={styles.searchInput} />
+//         </View>
+//     )
+// }
+
+const search = ({ navigation }) => {
+    return (
+      <>
         <View style={styles.searchContainer}>
-            <TextInput placeholder="Search..." style={styles.searchInput} />
+          <TextInput placeholder="Search..." style={styles.searchInput} />
         </View>
-    )
-}
+      </>
+    );
+  };
 
 const styles = StyleSheet.create({
     searchContainer: {
@@ -25,4 +35,4 @@ const styles = StyleSheet.create({
     }
 })
 
-export default AddNotes
+export default search;
